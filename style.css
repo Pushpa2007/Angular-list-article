@@ -1,0 +1,8 @@
+body {
+    background-color: blueviolet;
+    font-family: 'Poppins', sans-serif;
+}
+.text-center mb-4{
+    text-align: center;
+    color: rgb(2, 2, 32);
+}

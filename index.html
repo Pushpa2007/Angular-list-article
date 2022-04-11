@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular List Of Articles</title>
+    
+    <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body ng-app='myapp' ng-controller='mycontroller'>
+    <div class="jumbotron jumbotron-fluid pb-1">
+
+        <div class="container">
+            <h1 class='text-center mb-4' text-align:"center">List Of News Article</h1>
+            
+            <div class="row text-center">
+                
+               
+                <div class="col-md-4 bg-danger text-white py-3">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                               
+                                <th>Name</th>
+                                <th>Images</th>
+                                <th>Gender</th>
+                                <th>Species</th>
+                                <th>HomePlanet</th>
+                                <th>Occupation</th>
+                                
+                                <th>Sayings</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="li in alldata">
+                            <tr>
+                               
+                                    <td>{{li.name.first +" "+ li.name.middle +" "+ li.name.last}}</td>
+                                    <td>{{li.images.main}}</td>
+                                    <td>{{li.gender}}</td>
+                                    <td>{{li.species}}</td>
+                                    <td>{{li.homePlanet}}</td>
+                                    <td>{{li.occupation}}</td>
+                                    <td>{{li.sayings[0]}}</td>
+
+                                      
+                                      
+                                                                     
+                                                   
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                </div>
+            </div>
+
+            
+        </div>
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
