@@ -17,7 +17,7 @@
     <div class="jumbotron jumbotron-fluid pb-1">
 
         <div class="container">
-            <h1 class='text-center mb-4' text-align:"center">List Of News Article</h1>
+            <h1 class='header'>List Of News Article</h1>
             
             <div class="row text-center">
                 
@@ -42,12 +42,20 @@
                             <tr>
                                
                                     <td>{{li.name.first +" "+ li.name.middle +" "+ li.name.last}}</td>
-                                    <td>{{li.images.main}}</td>
+                                    <td><img ng-src={{li.images.main}}></img></td>
                                     <td>{{li.gender}}</td>
                                     <td>{{li.species}}</td>
                                     <td>{{li.homePlanet}}</td>
                                     <td>{{li.occupation}}</td>
-                                    <td>{{li.sayings[0]}}</td>
+                                    <td>
+                                    
+                                            <div ng-repeat="e in li.sayings">
+                                                
+                                                <p>{{e}}</p>
+                                                
+                                              
+                                              </div>                                        
+                                    </td>
 
                                       
                                       
